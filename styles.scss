@@ -95,6 +95,7 @@ nav {
   .remainingToDo {
     display:inline-block;
     margin:5px 15px;
+    font-size:1.1em;
   }
   ul{
     display: inline-block;
@@ -103,7 +104,7 @@ nav {
     text-align: center;
     vertical-align: center;
     vertical-align: middle;
-    width: 60%;
+    width: 55%;
     li{
       display:inline-block;
       margin:0 15px;
@@ -133,4 +134,7 @@ nav {
 }
 .finished {
   opacity: .5;
+}
+.hide {
+  display:none;
 }

@@ -61,6 +61,25 @@ var list = {
                   youDoData[idex].toDo = newTxt;
                 }
             });
+
+        });
+
+        $('nav').on('click','a', function(event){
+          event.preventDefault();
+          $(this).closest('li').addClass('clickedBorder');
+          $(this).closest('li').siblings('li').removeClass('clickedBorder');
+          if ($(this).attr('rel') === 'Active') {
+            console.log($(this).attr('rel'));
+            $('.toDoList').removeClass('hide');
+            $('.finished').addClass('hide');
+          }
+          else if ($(this).attr('rel') === "Completed") {
+            $('.toDoList').addClass('hide');
+            $('.finished').removeClass('hide');
+          }
+          else if($(this).attr('rel') === 'All') {
+            $('.toDoList').removeClass('hide');
+          }
         });
 
 
