@@ -92,6 +92,9 @@ nav {
   float: right;
   border: none;
   background-color: lightgrey; }
+  #deleteBut:hover {
+    font: 1.5em;
+    border: 2px solid #847360; }
 
 .clickedBorder {
   border: solid 1px white;

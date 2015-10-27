@@ -116,6 +116,10 @@ nav {
   float:right;
   border:none;
   background-color:lightgrey;
+  &:hover{
+    font:1.5em;
+    border:2px solid #847360;
+  }
 }
 
 .clickedBorder {

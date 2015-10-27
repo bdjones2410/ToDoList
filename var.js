@@ -27,6 +27,9 @@ var youDoData = [
 var toDelete = [];
 
 
+var itemsLeft = youDoData.length - toDelete.length + " tasks remain";
+
+
 
 
 
