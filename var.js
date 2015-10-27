@@ -2,14 +2,29 @@
 // DATA ARRAY   //
 //////////////////
 
-var youDo = [
+var youDoData = [
   {
     toDo : "Take out trash"
+  },
+  {
+    toDo : "clean sink"
+  },
+  {
+    toDo : "don't touch it"
+  },
+  {
+    toDo : "feed fish"
+  },
+  {
+    toDo : "sleep"
+  },
+  {
+    toDo : "nap time"
   },
 ];
 
 
-
+var toDelete = [];
 
 
 
@@ -26,23 +41,16 @@ var youDo = [
 //////////////////
 // TEMPLATES    //
 //////////////////
-var Templates= {
+var templates= {
  toDoFill:[
-            '<div class="toDolist" id="<%= idx %>">',
-            '<div class="checkBox">',
-            '<div id="check">&#x2713;</div>',
-            '</div>',
+            '<div class="toDoList" data-id="<%= id %>">',
+            '<a href="" class="checkBox">',
+            '<div id="check" class ="check hidden">&#x2713;</div>',
+            '</a>',
             '<div class="toDoItem">',
-            '<h4><%= toDo =></h4>',
+            '<h4 class=" "><%= toDo %></h4>',
             '</div>',
             '</div>'
             ].join(""),
-
-
-
-
-
-
-
 
 };
