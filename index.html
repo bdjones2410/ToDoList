@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>To Do</title>
+    <link href="bower_components/normalize-css/normalize.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel=
+    'stylesheet' type='text/css'>
+</head>
+
+<body>
+    <header>
+        <h1>MY AGENDA</h1>
+    </header>
+
+
+    <section class="wrapper">
+        <div class="input">
+            <form>
+                <input name="taskInput" placeholder="I have to..." type="text">
+            </form>
+        </div>
+
+
+        <div class="toDolist">
+          <div class="checkBox">
+            <div id="check">&#x2713;</div>
+          </div>
+          <div class="toDoItem">
+            <h4>I have all this stuff to do!</h4>
+          </div>
+        </div>
+        <div class="toDolist">
+          <div class="checkBox">
+            <div id="check">&#x2713;</div>
+          </div>
+          <div class="toDoItem">
+            <h4>I have all this stuff to do!</h4>
+          </div>
+        </div>
+        <div class="toDolist">
+          <div class="checkBox">
+            <div id="check">&#x2713;</div>
+          </div>
+          <div class="toDoItem">
+            <h4 class="doneItem">I have all this stuff to do!</h4>
+          </div>
+        </div>
+        <div class="toDolist">
+          <div class="checkBox">
+            <div id="check">&#x2713;</div>
+          </div>
+          <div class="toDoItem">
+            <h4>I have all this stuff to do!</h4>
+          </div>
+        </div>
+
+
+
+        <nav class="bottomNav">
+            <div class="remainingToDo">
+                1 item left
+            </div>
+            <ul>
+                <li class="clickedBorder" rel="All"><a href="">All</a></li>
+
+
+                <li><a href="" rel="Active">Active</a></li>
+
+
+                <li><a href="" rel="Completed">Completed</a></li>
+            </ul>
+            <button name="delete" id="deleteBut" type="delete">Clear Completed</button>
+        </nav>
+    </section>
+    <!-- libs -->
+    <script charset="utf-8" src="bower_components/jquery/dist/jquery.js">
+    </script>
+    <script charset="utf-8" src="bower_components/underscore/underscore.js">
+    </script> <!-- scripts -->
+
+    <script charset="utf-8" src="var.js">
+    </script>
+    <script charset="utf-8" src="main.js">
+    </script>
+</body>
+</html>

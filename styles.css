@@ -1,0 +1,99 @@
+/*******************************************
+OVER ALL
+*******************************************/
+body {
+  font-family: 'Indie Flower', cursive;
+  background-color: #c8bfb4; }
+
+.wrapper {
+  width: 50%;
+  margin: 0 auto; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+/*******************************************
+HEADER
+*******************************************/
+header {
+  width: 100%;
+  background-color: #847360;
+  color: #f6f0db; }
+  header h1 {
+    font-size: 5em;
+    margin: 0 auto;
+    text-align: center; }
+
+/*******************************************
+INPUT
+*******************************************/
+.input {
+  width: 100%; }
+  .input form {
+    width: 100%; }
+    .input form input {
+      width: 100%;
+      text-align: center; }
+
+/*******************************************
+TASKS
+*******************************************/
+.toDolist {
+  border-bottom: 1px solid white;
+  padding: 15px 0; }
+
+.checkBox {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 100%;
+  border: 1px solid black;
+  float: left; }
+
+#check {
+  text-align: center;
+  font-size: 1.5em; }
+
+.toDoItem {
+  display: inline-block;
+  vertical-align: top; }
+
+h4 {
+  padding: 5px 30px;
+  margin: 0; }
+
+/*******************************************
+NAV
+*******************************************/
+nav {
+  background-color: lightgrey;
+  color: white; }
+  nav .remainingToDo {
+    display: inline-block;
+    margin: 5px 15px; }
+  nav ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: center;
+    vertical-align: middle;
+    width: 60%; }
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+      padding: 0 5px; }
+
+#deleteBut {
+  float: right;
+  border: none;
+  background-color: lightgrey; }
+
+.clickedBorder {
+  border: solid 1px white;
+  border-radius: 5px; }
+
+.doneItem {
+  color: grey;
+  text-decoration: line-through; }
