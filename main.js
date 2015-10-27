@@ -35,8 +35,22 @@ var list ={
           });
           $('#hereDo').html('');
           list.loadToDo(youDoData);
-
       });
+//Thank you to Neeraj Dubey on stackOverflow for keyCode code.
+
+      $('#hereDo').on('dblclick','h4', function(){
+          $(this).attr('contenteditable', 'true');
+          $(this).keydown(function(event){
+            var keyCode = (event.keyCode ? event.keyCode : event.which);
+            if (keyCode === 13) {
+              $(this).attr('contenteditable', 'false');
+              var newText = $(this).text();
+              var idx = $(this).closest('.toDoList').data('id');
+                youDoData[idx].toDo = newText;
+            }
+          });
+
+    });
 
 
     },
