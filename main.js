@@ -31,6 +31,18 @@ var list = {
             $('.remainingToDo').html(itemsLeft);
         });
 
+        $('form').on('submit', function(event){
+          event.preventDefault();
+          var newToDo = {
+            toDo: $('input[name="taskInput"]').val(),
+          };
+          youDoData.unshift(newToDo);
+          var newDoId = youDoData.indexOf(newToDo);
+          $('#hereDo').html('');
+          list.loadToDo(youDoData);
+          $('input').val('');
+        });
+
         $('nav').on('click', '#deleteBut', function(event) {
             event.preventDefault();
             _.each(toDelete, function(el) {
@@ -69,7 +81,6 @@ var list = {
           $(this).closest('li').addClass('clickedBorder');
           $(this).closest('li').siblings('li').removeClass('clickedBorder');
           if ($(this).attr('rel') === 'Active') {
-            console.log($(this).attr('rel'));
             $('.toDoList').removeClass('hide');
             $('.finished').addClass('hide');
           }

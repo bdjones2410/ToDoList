@@ -3,24 +3,7 @@
 //////////////////
 
 var youDoData = [
-  {
-    toDo : "Take out trash"
-  },
-  {
-    toDo : "clean sink"
-  },
-  {
-    toDo : "don't touch it"
-  },
-  {
-    toDo : "feed fish"
-  },
-  {
-    toDo : "sleep"
-  },
-  {
-    toDo : "nap time"
-  },
+
 ];
 
 

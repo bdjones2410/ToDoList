@@ -39,9 +39,16 @@ INPUT
   width:100%;
   form{
     width:100%;
+    padding:0;
     input {
-    width:100%;
-    text-align: center;
+      width: 99.5%;
+      text-align: center;
+      background-color: lightgrey;
+      font-weight: bold;
+      padding: 0;
+      font-size: 1.5em;
+      border: 2px solid #f6f0db;
+      color:#847360;
   }
   }
 }
@@ -53,9 +60,15 @@ INPUT
 /*******************************************
 TASKS
 *******************************************/
+#hereDo {
+    background-color:brown;
+    min-height:50px;
+}
+
 .toDoList {
   border-bottom:1px solid white;
-  padding:15px 0;
+  padding:15px;
+  color:#f6f0db;
 }
 
 .checkBox{
@@ -69,6 +82,7 @@ TASKS
 #check {
   text-align: center;
   font-size: 1.5em;
+  color:#f6f0db;
 }
 
 .toDoItem{
@@ -117,6 +131,7 @@ nav {
   float:right;
   border:none;
   background-color:lightgrey;
+  margin-top: 7px;
   &:hover{
     font:1.5em;
     border:2px solid #847360;
@@ -136,5 +151,5 @@ nav {
   opacity: .5;
 }
 .hide {
-  display:none;
+  visibility: hidden;
 }
