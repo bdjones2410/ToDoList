@@ -29,6 +29,7 @@ var list = {
             } else(toDelete.push(elID));
             itemsLeft = youDoData.length - toDelete.length + " tasks remain";
             $('.remainingToDo').html(itemsLeft);
+            toDelete.sort(function (a, b) { return b - a ;});
         });
 
         $('form').on('submit', function(event){
