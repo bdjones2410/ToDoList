@@ -19,7 +19,8 @@ HEADER
 header {
   width: 100%;
   background-color: #847360;
-  color: #f6f0db; }
+  color: #f6f0db;
+  margin-bottom: 2%; }
   header h1 {
     font-size: 5em;
     margin: 0 auto;
@@ -92,11 +93,11 @@ nav {
   nav ul {
     display: inline-block;
     list-style: none;
-    margin: 0 auto;
-    text-align: center;
-    vertical-align: center;
+    margin: 0 0 0 12%;
     vertical-align: middle;
-    width: 55%; }
+    padding: 0;
+    clear: both;
+    width: 45%; }
     nav ul li {
       display: inline-block;
       margin: 0 15px;
@@ -106,7 +107,8 @@ nav {
   float: right;
   border: none;
   background-color: lightgrey;
-  margin-top: 7px; }
+  margin-top: 7px;
+  padding: 0 2px; }
   #deleteBut:hover {
     font: 1.5em;
     border: 2px solid #847360; }

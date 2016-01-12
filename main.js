@@ -27,21 +27,30 @@ var list = {
                 var idxof = _.indexOf(toDelete, elID);
                 toDelete.splice(idxof, 1);
             } else(toDelete.push(elID));
-            itemsLeft = youDoData.length - toDelete.length + " tasks remain";
+            itemsLeft = youDoData.length - toDelete.length +
+                " tasks remain";
             $('.remainingToDo').html(itemsLeft);
-            toDelete.sort(function (a, b) { return b - a ;});
+            toDelete.sort(function(a, b) {
+                return b - a;
+            });
         });
 
-        $('form').on('submit', function(event){
-          event.preventDefault();
-          var newToDo = {
-            toDo: $('input[name="taskInput"]').val(),
-          };
-          youDoData.unshift(newToDo);
-          var newDoId = youDoData.indexOf(newToDo);
-          $('#hereDo').html('');
-          list.loadToDo(youDoData);
-          $('input').val('');
+        $('form').on('submit', function(event) {
+            event.preventDefault();
+            var newToDo = {
+                toDo: $('input[name="taskInput"]').val(),
+            };
+            youDoData.unshift(newToDo);
+            var newDoId = youDoData.indexOf(newToDo);
+            $('#hereDo').html('');
+            list.loadToDo(youDoData);
+            $('input').val('');
+            itemsLeft = youDoData.length - toDelete.length +
+                " tasks remain";
+            $('.remainingToDo').html(itemsLeft);
+            toDelete.sort(function(a, b) {
+                return b - a;
+            });
         });
 
         $('nav').on('click', '#deleteBut', function(event) {
@@ -67,31 +76,30 @@ var list = {
                     var idx = $(this).closest(
                         '.toDoList').data('id');
                     youDoData[idx].toDo = newText;
-                }
-                else {
-                  var newTxt = $(this).text();
-                  var idex = $(this).closest('.toDoList').data('id');
-                  youDoData[idex].toDo = newTxt;
+                } else {
+                    var newTxt = $(this).text();
+                    var idex = $(this).closest(
+                        '.toDoList').data('id');
+                    youDoData[idex].toDo = newTxt;
                 }
             });
 
         });
 
-        $('nav').on('click','a', function(event){
-          event.preventDefault();
-          $(this).closest('li').addClass('clickedBorder');
-          $(this).closest('li').siblings('li').removeClass('clickedBorder');
-          if ($(this).attr('rel') === 'Active') {
-            $('.toDoList').removeClass('hide');
-            $('.finished').addClass('hide');
-          }
-          else if ($(this).attr('rel') === "Completed") {
-            $('.toDoList').addClass('hide');
-            $('.finished').removeClass('hide');
-          }
-          else if($(this).attr('rel') === 'All') {
-            $('.toDoList').removeClass('hide');
-          }
+        $('nav').on('click', 'a', function(event) {
+            event.preventDefault();
+            $(this).closest('li').addClass('clickedBorder');
+            $(this).closest('li').siblings('li').removeClass(
+                'clickedBorder');
+            if ($(this).attr('rel') === 'Active') {
+                $('.toDoList').removeClass('hide');
+                $('.finished').addClass('hide');
+            } else if ($(this).attr('rel') === "Completed") {
+                $('.toDoList').addClass('hide');
+                $('.finished').removeClass('hide');
+            } else if ($(this).attr('rel') === 'All') {
+                $('.toDoList').removeClass('hide');
+            }
         });
 
 
